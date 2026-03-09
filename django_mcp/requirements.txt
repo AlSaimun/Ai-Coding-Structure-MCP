@@ -1,4 +1,7 @@
+# MCP server core
 mcp>=1.0.0
-chromadb>=1.0.0
-pypdf>=3.0.0 
 
+# Vector store + semantic search
+chromadb>=1.0.0
+
+pypdf>=3.0.0

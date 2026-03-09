@@ -32,7 +32,7 @@ except ImportError:
 #    but do NOT add the project root (that would shadow the installed mcp SDK).
 sys.path.insert(0, str(Path(__file__).parent))
 
-from tools import ALL_TOOLS, TOOL_REGISTRY   # noqa: E402
+from tools import ALL_TOOLS                  # noqa: E402
 from vector_store import init_store          # noqa: E402
 
 # ── Resolve project root ──────────────────────────────────────────────────────
@@ -65,9 +65,11 @@ async def main() -> None:
     async def list_tools() -> list[types.Tool]:
         return [tool.to_mcp_tool() for tool in ALL_TOOLS]
 
+    _TOOL_REGISTRY = {tool.definition.name: tool for tool in ALL_TOOLS}
+
     @server.call_tool()
     async def call_tool(name: str, arguments: dict[str, Any]) -> list[types.TextContent]:
-        tool = TOOL_REGISTRY.get(name)
+        tool = _TOOL_REGISTRY.get(name)
         if tool is None:
             return [types.TextContent(type="text", text=f"Unknown tool: '{name}'")]
         return tool.to_mcp_content(arguments)
