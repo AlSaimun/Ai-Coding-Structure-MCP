@@ -89,7 +89,7 @@ def _static_scan(project_root: Path, app_name: str) -> str:
     apps_dirs = [project_root / "apps", project_root]
     lines: list[str] = [
         "⚠️  _Could not run `manage.py` — showing static migration file counts._",
-        "_(To see actual pending migrations, ensure PROJECT_ROOT and DJANGO_SETTINGS_MODULE are set correctly.)_",
+        "_(To see actual pending migrations, ensure PROJECT_ROOT is set correctly.)_",
         "",
     ]
 

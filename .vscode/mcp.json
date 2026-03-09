@@ -1,0 +1,11 @@
+{
+    "servers": {
+        "django-mcp": {
+            "type": "stdio",
+            "command": "/Users/abdullahalsaimun/My Workspace/My projects/Ai-Coding-Structure-MCP/venv/bin/python",
+            "args": [
+                "/Users/abdullahalsaimun/My Workspace/My projects/Ai-Coding-Structure-MCP/mcp/django_mcp/server.py"
+            ]
+        }
+    }
+}

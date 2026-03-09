@@ -91,8 +91,7 @@ Create `.vscode/mcp.json` in your workspace root:
       "command": "${workspaceFolder}/django_mcp/venv/bin/python",
       "args": ["${workspaceFolder}/django_mcp/server.py"],
       "env": {
-        "PROJECT_ROOT": "${workspaceFolder}",
-        "DJANGO_SETTINGS_MODULE": "config.settings.development"
+        "PROJECT_ROOT": "${workspaceFolder}"
       }
     }
   }
@@ -110,8 +109,7 @@ Edit `~/.cursor/mcp.json`:
       "command": "/absolute/path/to/django_mcp/venv/bin/python",
       "args": ["/absolute/path/to/django_mcp/server.py"],
       "env": {
-        "PROJECT_ROOT": "/absolute/path/to/your/django/project",
-        "DJANGO_SETTINGS_MODULE": "config.settings.development"
+        "PROJECT_ROOT": "/absolute/path/to/your/django/project"
       }
     }
   }
@@ -124,7 +122,6 @@ Edit `~/.cursor/mcp.json`:
 claude mcp add django-mcp \
   --scope project \
   --env PROJECT_ROOT=/absolute/path/to/project \
-  --env DJANGO_SETTINGS_MODULE=config.settings.development \
   /path/to/django_mcp/venv/bin/python \
   -- /path/to/django_mcp/server.py
 ```
@@ -140,8 +137,7 @@ Edit `~/.codeium/windsurf/mcp_config.json`:
       "command": "/absolute/path/to/django_mcp/venv/bin/python",
       "args": ["/absolute/path/to/django_mcp/server.py"],
       "env": {
-        "PROJECT_ROOT": "/absolute/path/to/project",
-        "DJANGO_SETTINGS_MODULE": "config.settings.development"
+        "PROJECT_ROOT": "/absolute/path/to/project"
       }
     }
   }

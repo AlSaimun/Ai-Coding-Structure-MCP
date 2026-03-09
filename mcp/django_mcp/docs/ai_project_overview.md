@@ -549,7 +549,6 @@ python manage.py showmigrations      # lists all migrations and their applied st
 
 | Variable | Required | Example | Description |
 |----------|----------|---------|-------------|
-| `DJANGO_SETTINGS_MODULE` | ✅ | `config.settings.development` | Active settings module |
 | `PROJECT_ROOT` | ✅ | `/home/user/myproject` | Used by MCP server to locate project |
 | `SECRET_KEY` | ✅ | `django-insecure-xxx` | Django secret key — never commit real value |
 | `DATABASE_URL` | ✅ | `postgresql://user:pass@localhost/db` | PostgreSQL DSN |
